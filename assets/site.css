@@ -1,0 +1,76 @@
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --line: rgba(34, 34, 34, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Special Elite", "Courier Prime", "Courier New", serif;
+}
+
+.site {
+  width: min(1000px, 92vw);
+  margin: 0 auto;
+  padding: clamp(1.4rem, 3vw, 2.2rem) 0 clamp(3rem, 7vw, 5rem);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.9rem;
+}
+
+.brand {
+  margin: 0;
+  font-size: clamp(0.95rem, 2vw, 1.08rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-logo {
+  width: clamp(44px, 5vw, 54px);
+  height: clamp(44px, 5vw, 54px);
+  object-fit: contain;
+  display: block;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  border-color: rgba(34, 34, 34, 0.4);
+  outline: none;
+}
+
+.nav-links a[aria-current="page"] {
+  border-color: rgba(34, 34, 34, 0.4);
+}
+
+@media (max-width: 580px) {
+  .site {
+    width: min(96vw, 560px);
+  }
+}

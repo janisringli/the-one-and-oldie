@@ -38,165 +38,11 @@
       href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/loader.css" />
+    <link rel="stylesheet" href="./assets/site.css" />
     <link rel="stylesheet" href="./assets/nav.css" />
-    <style>
-      :root {
-        --bg: #ffffff;
-        --text: #222222;
-        --line: rgba(34, 34, 34, 0.2);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: "Special Elite", "Courier Prime", "Courier New", serif;
-      }
-
-      .site {
-        width: min(760px, 92vw);
-        margin: 0 auto;
-        padding: clamp(1.4rem, 3vw, 2.2rem) 0 clamp(3rem, 7vw, 5rem);
-      }
-
-      .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 0.9rem;
-      }
-
-      .brand {
-        margin: 0;
-        font-size: clamp(0.95rem, 2vw, 1.08rem);
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      .brand-wrap {
-        display: flex;
-        align-items: center;
-        gap: 0.65rem;
-      }
-
-      .brand-logo {
-        width: clamp(44px, 5vw, 54px);
-        height: clamp(44px, 5vw, 54px);
-        object-fit: contain;
-        display: block;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: clamp(1rem, 3vw, 2rem);
-        font-size: 0.92rem;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-      }
-
-      a:hover,
-      a:focus-visible {
-        border-color: rgba(34, 34, 34, 0.4);
-        outline: none;
-      }
-
-      .content {
-        margin-top: clamp(2rem, 5vw, 3.2rem);
-        text-align: center;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(1.6rem, 4.3vw, 2.5rem);
-        font-weight: 400;
-        letter-spacing: 0.09em;
-      }
-
-      .intro {
-        margin: 1rem auto 0;
-        max-width: 44ch;
-        line-height: 1.8;
-      }
-
-      .contact-card {
-        margin: clamp(1.8rem, 4vw, 2.6rem) auto 0;
-        max-width: 520px;
-        border: 1px solid var(--line);
-        padding: clamp(1rem, 3vw, 1.5rem);
-        text-align: left;
-      }
-
-      .contact-card p {
-        margin: 0.55rem 0;
-        line-height: 1.7;
-      }
-
-      .label {
-        display: inline-block;
-        min-width: 92px;
-      }
-
-      .note {
-        margin-top: 1rem;
-        font-size: 0.9rem;
-        opacity: 0.9;
-      }
-
-      @media (max-width: 580px) {
-        .site {
-          width: min(96vw, 560px);
-        }
-
-        .content {
-          text-align: left;
-        }
-
-        .intro {
-          margin-left: 0;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/contact.css" />
   </head>
   <body>
-    <div id="page-loader" class="page-loader" aria-live="polite" aria-busy="true">
-      <div class="loader-half loader-half--top" aria-hidden="true"></div>
-      <div class="loader-half loader-half--bottom" aria-hidden="true"></div>
-      <div class="loader-scene">
-        <p class="loader-label">The One &amp; Oldie</p>
-        <div
-          class="dino-game"
-          role="progressbar"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          aria-valuenow="0"
-          aria-label="Seite wird geladen"
-        >
-          <canvas class="dino-canvas" aria-hidden="true"></canvas>
-          <img
-            class="loader-runner"
-            src="./assets/logo.png"
-            alt=""
-            width="72"
-            height="72"
-            decoding="async"
-          />
-        </div>
-      </div>
-    </div>
-
     <div class="site">
       <header class="nav">
         <div class="brand-wrap">
@@ -207,21 +53,23 @@
           />
           <p class="brand">The One &amp; Oldie</p>
         </div>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-          aria-label="Menü öffnen"
-        >
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-        </button>
-        <nav id="nav-menu" class="nav-links" aria-label="Hauptnavigation">
-          <a href="index.html">Start</a>
-          <a href="contact.html">Kontakt</a>
-        </nav>
+        <div class="nav-menu">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Menü öffnen"
+          >
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+          </button>
+          <nav id="nav-menu" class="nav-links" aria-label="Hauptnavigation">
+            <a href="index.html">Start</a>
+            <a href="contact.html" aria-current="page">Kontakt</a>
+          </nav>
+        </div>
       </header>
 
       <main class="content">
@@ -232,19 +80,27 @@
         </p>
 
         <section class="contact-card" aria-label="Kontaktdetails Inhaber">
-          <p><span class="label">Inhaber:</span> Daniel Maag</p>
-          <p>
-            <span class="label">Telefon:</span>
-            <a href="tel:+41765804342">+41 76 580 43 42</a>
-          </p>
-          <p>
-            <span class="label">E-Mail:</span>
-            <a href="mailto:danimaag@proton.me">danimaag@proton.me</a>
-          </p>
+          <dl class="contact-list">
+            <dt>Inhaber</dt>
+            <dd>Daniel Maag</dd>
+            <dt>Telefon</dt>
+            <dd>
+              <a href="tel:+41765804342">+41 76 580 43 42</a>
+            </dd>
+            <dt>E-Mail</dt>
+            <dd class="contact-email">
+              <a href="mailto:danimaag@proton.me">danimaag@proton.me</a>
+            </dd>
+          </dl>
+          <div class="contact-actions">
+            <a class="contact-action" href="tel:+41765804342">Anrufen</a>
+            <a class="contact-action" href="mailto:danimaag@proton.me"
+              >E-Mail</a
+            >
+          </div>
         </section>
       </main>
     </div>
-    <script src="./assets/loader.js"></script>
     <script src="./assets/nav.js"></script>
   </body>
 </html>

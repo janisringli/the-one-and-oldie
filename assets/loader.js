@@ -3,12 +3,19 @@
   const REVEAL_MS = 950;
   const SCROLL_DISTANCE = 200;
   const BG_PARALLAX = 0.2;
+  const LOADER_SEEN_KEY = "one-and-oldie-loader-seen";
 
   const BG = "#f7f7f7";
   const FG = "#535353";
 
   const loader = document.getElementById("page-loader");
   if (!loader) return;
+
+  if (sessionStorage.getItem(LOADER_SEEN_KEY)) {
+    loader.remove();
+    document.body.classList.remove("is-loading");
+    return;
+  }
 
   const canvas = loader.querySelector(".dino-canvas");
   const game = loader.querySelector(".dino-game");
@@ -61,6 +68,7 @@
     if (!loaded || progress < 100 || elapsed < MIN_DISPLAY_MS) return;
 
     revealing = true;
+    sessionStorage.setItem(LOADER_SEEN_KEY, "1");
     loader.setAttribute("aria-busy", "false");
     loader.classList.add("is-revealing");
 

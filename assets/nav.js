@@ -35,4 +35,10 @@
       setOpen(false);
     }
   });
+
+  document.addEventListener("click", function (event) {
+    if (!mq.matches || !nav.classList.contains("is-open")) return;
+    if (nav.contains(event.target)) return;
+    setOpen(false);
+  });
 })();

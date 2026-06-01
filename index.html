@@ -38,70 +38,10 @@
       href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./assets/site.css" />
     <link rel="stylesheet" href="./assets/loader.css" />
     <link rel="stylesheet" href="./assets/nav.css" />
     <style>
-      :root {
-        --bg: #ffffff;
-        --text: #222222;
-        --line: rgba(34, 34, 34, 0.2);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: "Special Elite", "Courier Prime", "Courier New", serif;
-      }
-
-      .site {
-        width: min(1000px, 92vw);
-        margin: 0 auto;
-        padding: clamp(1.4rem, 3vw, 2.2rem) 0 clamp(3rem, 7vw, 5rem);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 0.9rem;
-      }
-
-      .brand {
-        margin: 0;
-        font-size: clamp(0.95rem, 2vw, 1.08rem);
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      .brand-wrap {
-        display: flex;
-        align-items: center;
-        gap: 0.65rem;
-      }
-
-      .brand-logo {
-        width: clamp(44px, 5vw, 54px);
-        height: clamp(44px, 5vw, 54px);
-        object-fit: contain;
-        display: block;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: clamp(1rem, 3vw, 2rem);
-        font-size: 0.92rem;
-      }
-
-      .nav a,
       .btn,
       .footer a {
         color: inherit;
@@ -110,8 +50,6 @@
         transition: border-color 0.15s ease;
       }
 
-      .nav a:hover,
-      .nav a:focus-visible,
       .btn:hover,
       .btn:focus-visible,
       .footer a:hover,
@@ -220,10 +158,6 @@
       }
 
       @media (max-width: 580px) {
-        .site {
-          width: min(96vw, 560px);
-        }
-
         .events,
         .gallery {
           grid-template-columns: 1fr;
@@ -276,21 +210,23 @@
           />
           <p class="brand">The One &amp; Oldie</p>
         </div>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-          aria-label="Menü öffnen"
-        >
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-        </button>
-        <nav id="nav-menu" class="nav-links" aria-label="Hauptnavigation">
-          <a href="index.html">Start</a>
-          <a href="contact.html">Kontakt</a>
-        </nav>
+        <div class="nav-menu">
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Menü öffnen"
+          >
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+          </button>
+          <nav id="nav-menu" class="nav-links" aria-label="Hauptnavigation">
+            <a href="index.html" aria-current="page">Start</a>
+            <a href="contact.html">Kontakt</a>
+          </nav>
+        </div>
       </header>
 
       <main>
