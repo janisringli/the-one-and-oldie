@@ -15,8 +15,3 @@ Plain HTML/CSS/JS, no build step. Deployed via GitHub Pages (`CNAME`).
 - `contact.html` — contact page
 - `assets/` — styles, nav/loader scripts, gallery images, favicons
 
-## Local preview
-
-```bash
-python3 -m http.server
-```
