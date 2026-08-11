@@ -117,17 +117,16 @@
       }
 
       .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.8rem;
+        columns: 3;
+        column-gap: 0.8rem;
       }
 
       .gallery img {
         width: 100%;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
-        border: 1px solid var(--line);
         display: block;
+        border: 1px solid var(--line);
+        margin-bottom: 0.8rem;
+        break-inside: avoid;
       }
 
       .cta {
@@ -151,16 +150,22 @@
       }
 
       @media (max-width: 820px) {
-        .events,
-        .gallery {
+        .events {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .gallery {
+          columns: 2;
         }
       }
 
       @media (max-width: 580px) {
-        .events,
-        .gallery {
+        .events {
           grid-template-columns: 1fr;
+        }
+
+        .gallery {
+          columns: 1;
         }
 
         .hero {
@@ -267,6 +272,14 @@
             <img
               src="./assets/gallery/DSCF6082.jpeg"
               alt="Beispielbild 3 für späteres Ersetzen"
+            />
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect width='600' height='800' fill='%23f7f7f7'/%3E%3Ctext x='50%25' y='50%25' font-family='monospace' font-size='24' fill='%23535353' text-anchor='middle'%3EPortrait 1%3C/text%3E%3C/svg%3E"
+              alt="Beispielbild Portrait 1 für späteres Ersetzen"
+            />
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect width='600' height='800' fill='%23f7f7f7'/%3E%3Ctext x='50%25' y='50%25' font-family='monospace' font-size='24' fill='%23535353' text-anchor='middle'%3EPortrait 2%3C/text%3E%3C/svg%3E"
+              alt="Beispielbild Portrait 2 für späteres Ersetzen"
             />
           </div>
         </section>
