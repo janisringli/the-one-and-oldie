@@ -165,7 +165,12 @@
         }
 
         .gallery {
-          columns: 1;
+          columns: 2;
+          column-gap: 0.5rem;
+        }
+
+        .gallery img {
+          margin-bottom: 0.5rem;
         }
 
         .hero {
@@ -212,14 +217,14 @@
 
     <div class="site">
       <header class="nav">
-        <div class="brand-wrap">
+        <a class="brand-wrap" href="index.html" aria-label="Zur Startseite">
           <img
             class="brand-logo"
             src="./assets/logo.png"
             alt="The One &amp; Oldie Logo"
           />
           <p class="brand">The One &amp; Oldie</p>
-        </div>
+        </a>
         <div class="nav-menu">
           <button
             class="nav-toggle"
@@ -259,27 +264,31 @@
           <div class="gallery">
             <img
               src="./assets/gallery/DSCF6002.jpeg"
-              alt="Beispielbild 1 für späteres Ersetzen"
+              alt="Nahaufnahme der roten Ladefläche und Fahrertür des Chevy, durch Blätterwerk fotografiert"
             />
             <img
-              src="./assets/gallery/DSC00577.jpeg"
-              alt="Beispielbild 2 für späteres Ersetzen"
+              src="./assets/gallery/DSCF6050.jpeg"
+              alt="Roter Chevy Pickup von hinten am Seeufer vor Dorfkulisse"
             />
             <img
               src="./assets/gallery/DSCF5998.jpeg"
-              alt="Beispielbild 3 für späteres Ersetzen"
+              alt="Heckansicht des roten Chevy mit Chevrolet-Schriftzug auf der Ladeklappe"
             />
             <img
               src="./assets/gallery/DSCF6082.jpeg"
-              alt="Beispielbild 3 für späteres Ersetzen"
+              alt="Detailaufnahme von Lenkrad und Armaturenbrett des Chevy"
             />
             <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect width='600' height='800' fill='%23f7f7f7'/%3E%3Ctext x='50%25' y='50%25' font-family='monospace' font-size='24' fill='%23535353' text-anchor='middle'%3EPortrait 1%3C/text%3E%3C/svg%3E"
-              alt="Beispielbild Portrait 1 für späteres Ersetzen"
+              src="./assets/gallery/ea9ece87-5e4c-4c04-82e8-7ed793b99b3c.jpeg"
+              alt="Blick vom Fahrersitz auf das Armaturenbrett und Lenkrad des Chevy"
             />
             <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect width='600' height='800' fill='%23f7f7f7'/%3E%3Ctext x='50%25' y='50%25' font-family='monospace' font-size='24' fill='%23535353' text-anchor='middle'%3EPortrait 2%3C/text%3E%3C/svg%3E"
-              alt="Beispielbild Portrait 2 für späteres Ersetzen"
+              src="./assets/gallery/DSCF5993.jpeg"
+              alt="Frontale Nahaufnahme des roten Chevy vor Bäumen"
+            />
+            <img
+              src="./assets/gallery/DSC00577.jpeg"
+              alt="Roter Chevy Pickup am Seeufer vor Rebbergen und Dorfkulisse"
             />
           </div>
         </section>

@@ -65,6 +65,11 @@ body {
   outline: none;
 }
 
+.nav a.brand-wrap:hover,
+.nav a.brand-wrap:focus-visible {
+  border-color: transparent;
+}
+
 .nav-links a[aria-current="page"] {
   border-color: rgba(34, 34, 34, 0.4);
 }
